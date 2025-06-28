@@ -1,5 +1,5 @@
 pip install -e .
 
-pip uninstall prefiq
+pip uninstall prefiq -y
 
 which prefiq

@@ -5,7 +5,7 @@ setup(
     version="0.1",
     packages=find_packages(),
     install_requires=[
-        "typer>=0.16.0",
+        "click>=8.0.0",
         "rich>=13.0.0"
     ],
     entry_points={
