@@ -22,4 +22,4 @@ Welcome to `{project_name}`! This project was created using the [prefiq CLI].
     with open(path, 'w') as f:
         f.write(content)
 
-    console.log("[green]📝 README.md created with project info[/green]")
+    console.log("[green] README.md created with project info[/green]")

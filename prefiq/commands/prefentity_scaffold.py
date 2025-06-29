@@ -14,15 +14,15 @@ def copy_prefentity_scaffold(project_name: str):
     dst = os.path.join(project_name, "prefentity")
 
     if not os.path.exists(src):
-        console.print(f"[red]❌ Template source not found: {src}[/red]")
+        console.print(f"[red] Template source not found: {src}[/red]")
         return
 
     if os.path.exists(dst):
-        console.print(f"[yellow]⚠️ Prefentity folder already exists at: {dst}[/yellow]")
+        console.print(f"[yellow] Prefentity folder already exists at: {dst}[/yellow]")
         return
 
     try:
         shutil.copytree(src, dst)
-        console.print(f"[green]📁 Copied prefentity scaffold to:[/green] {dst}")
+        console.print(f"[green] Copied prefentity scaffold to:[/green] {dst}")
     except Exception as e:
-        console.print(f"[red]❌ Failed to copy scaffold: {e}[/red]")
+        console.print(f"[red] Failed to copy scaffold: {e}[/red]")

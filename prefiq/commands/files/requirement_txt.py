@@ -18,5 +18,5 @@ def add_requirements_txt(project_name: str):
         for line in requirements:
             f.write(line + "\n")
 
-    console.log("[green]📦 requirements.txt created with default packages[/green]")
+    console.log("[green] requirements.txt created with default packages[/green]")
 

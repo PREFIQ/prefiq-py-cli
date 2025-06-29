@@ -27,21 +27,21 @@ def new_app(app_name: str, base: bool, path: str, force: bool):
 
     if os.path.exists(dst):
         if not force:
-            console.print(f"[red]❌ App '{app_name}' already exists at {dst}[/red]")
+            console.print(f"[red] App '{app_name}' already exists at {dst}[/red]")
             return
         else:
             shutil.rmtree(dst)
-            console.print(f"[yellow]⚠️ Overwriting existing app at {dst}...[/yellow]")
+            console.print(f"[yellow] Overwriting existing app at {dst}...[/yellow]")
 
-    console.print(f"[cyan]🚀 Creating app '{app_name}' in mode: {mode}[/cyan]")
+    console.print(f"[cyan] Creating app '{app_name}' in mode: {mode}[/cyan]")
 
     if not os.path.exists(src):
-        console.print(f"[red]❌ Template source not found: {src}[/red]")
+        console.print(f"[red] Template source not found: {src}[/red]")
         return
 
     if mode == "full":
         shutil.copytree(src, dst)
-        console.print(f"[green]📁 Full scaffold copied to:[/green] {dst}")
+        console.print(f"[green] Full scaffold copied to:[/green] {dst}")
     else:
         os.makedirs(dst)
         keep_folders = [
@@ -56,8 +56,8 @@ def new_app(app_name: str, base: bool, path: str, force: bool):
             elif os.path.isfile(src_path):
                 os.makedirs(os.path.dirname(dst_path), exist_ok=True)
                 shutil.copy2(src_path, dst_path)
-        console.print(f"[green]📁 Semi scaffold copied to:[/green] {dst}")
+        console.print(f"[green] Semi scaffold copied to:[/green] {dst}")
 
     register_app(app_name, path=dst)
-    console.print(f"\n[bold bright_green]✅ App '{app_name}' created successfully![/bold bright_green]")
+    console.print(f"\n[bold bright_green] App '{app_name}' created successfully![/bold bright_green]")
 

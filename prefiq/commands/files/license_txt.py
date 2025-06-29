@@ -17,4 +17,4 @@ of this software and associated documentation files... (trimmed for brevity)
     with open(path, 'w') as f:
         f.write(content)
 
-    console.log("[green]📄 LICENSE file created[/green]")
+    console.log("[green] LICENSE file created[/green]")

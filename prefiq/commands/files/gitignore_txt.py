@@ -30,4 +30,4 @@ Thumbs.db
     with open(path, 'w') as f:
         f.write(content)
 
-    console.log("[green]🛑 .gitignore file created[/green]")
+    console.log("[green] .gitignore file created[/green]")

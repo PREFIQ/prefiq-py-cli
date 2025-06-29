@@ -3,9 +3,9 @@
 from prefiq.commands.files.requirement_txt import add_requirements_txt
 from prefiq.commands.files.readme_md import add_readme_md
 from prefiq.commands.files.license_txt import add_license_txt
-from prefiq.commands.files.gitignore_txt import add_gitignore_txt  # ✅ new
+from prefiq.commands.files.gitignore_txt import add_gitignore_txt
 
-from prefiq.commands.prefentity_scaffold import copy_prefentity_scaffold  # ✅ new
+from prefiq.commands.prefentity_scaffold import copy_prefentity_scaffold
 
 __all__ = ["create_project_files"]
 
@@ -14,7 +14,7 @@ def create_project_files(project_name: str):
     add_requirements_txt(project_name)
     add_readme_md(project_name)
     add_license_txt(project_name)
-    add_gitignore_txt(project_name)  # ✅ new
+    add_gitignore_txt(project_name)
 
-    copy_prefentity_scaffold(project_name)  # ✅ new
+    copy_prefentity_scaffold(project_name)
 
