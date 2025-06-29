@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "crm",
+      "path": "apps\\crm"
+    }
+  ],
+  "sites": [],
+  "version": "1.0.0"
+}

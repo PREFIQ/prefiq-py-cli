@@ -6,7 +6,8 @@ Handles registration of apps and sites with metadata.
 import os
 import json
 
-MANIFEST_PATH = "prefentity/manifest.json"
+MANIFEST_DIR = "prefentity"
+MANIFEST_PATH = os.path.join(MANIFEST_DIR, "manifest.json")
 
 def _load_manifest():
     if not os.path.exists(MANIFEST_PATH):
@@ -16,6 +17,7 @@ def _load_manifest():
         return json.load(f)
 
 def _save_manifest(data):
+    os.makedirs(MANIFEST_DIR, exist_ok=True)  # Ensure the directory exists
     with open(MANIFEST_PATH, "w") as f:
         json.dump(data, f, indent=2)
 
@@ -50,4 +52,5 @@ def remove_app(name: str):
         print(f"[−] Removed app: {name}")
     else:
         print(f"[!] App '{name}' not found.")
+
 
